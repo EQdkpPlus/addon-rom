@@ -1,0 +1,57 @@
+<Ui xmlns="http://www.runewaker.com/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../../worldxml/ui.xsd">
+	<Script file="../lua/wrRaidTracker.lua"></Script>
+	<Frame name="wrRaidTracker" parent="UIParent" enableMouse="false">
+		<Scripts>
+			<OnUpdate>
+			if not (wrRaidTracker_isLoaded) then
+                if(UnitName("player"))then
+                    wrRaidTracker_Initialise(this)
+                end
+			end
+			</OnUpdate>
+			<OnEvent>
+				wrRaidTracker_OnEvent(this, event);
+			</OnEvent>
+		</Scripts>
+	</Frame>
+	
+	<Frame name="wrRaidTracker_DropFrame" inherits="UICommonFrameTemplate" enableMouse="true" hidden="true" parent="UIParent">
+		<Size>
+			<AbsDimension x="380" y="680"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Layers>
+			<Layer>
+				<FontString name="wrRaidTracker_DropFrame_Title" inherits="GameTitleFont" text="Withoutrulez Tracker">
+					<Anchors>
+						<Anchor point="TOP" relativePoint="TOP">
+							<Offset>
+								<AbsDimension x="0" y="8"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<EditBox name="wrRaidTracker_DKP_EditBox" inherits="UIMultiEditBoxTemplate" multiLine="true" letters="80000">
+				<Size>
+					<AbsDimension x="350" y="630" /> 
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="20" y="30" /> 
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<HitRectInsets>
+					<AbsInset left="4" right="4" top="4" bottom="4" /> 
+				</HitRectInsets>
+				<FontString inherits="GameEditFont" /> 
+			</EditBox>
+		</Frames>
+	</Frame>
+</Ui>

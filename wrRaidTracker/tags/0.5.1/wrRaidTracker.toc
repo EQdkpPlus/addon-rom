@@ -1,0 +1,6 @@
+## Interface: 2.0.0.1825
+## Title: Without Rulez Raid Tracker
+## Author: paschy
+## Version: 0.5
+xml/wrRaidTracker.xml
+lua/wrRaidTracker.lua

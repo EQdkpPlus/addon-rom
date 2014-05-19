@@ -1,0 +1,13 @@
+Im EQDKP-Plus müsst Ihr folgende Ereignisse hinzufügen:
+
+Bloody Gallery
+Cyclops Lair
+Forsaken Abbey
+Kalin Shrine
+Mystic Altar
+Necropolis of Mirrors
+Paspers Shrine
+Windmill Basement
+
+Wenn Ihr die Namen ändern wollt, dann geht nach der Installation des Plugins "RaidlogImport"
+in die dortige Zonen/Bossverwaltung und gleicht es mit euren gewählten Ereignisnamen ab.
